@@ -33,7 +33,7 @@ async def forward_gps_data():
                 sentences = decoded_data.split('\r\n')
                 for sentence in sentences[:-1]:
                     if sentence.startswith('$'):
-                        print("---update once--\n", sentence)
+                        print(sentence)
                         send_gps_data(sentence.encode('utf-8') + b'\r\n')  # Send complete NMEA sentence
                         led13.on()
                 gps_buffer = sentences[-1].encode('utf-8')
