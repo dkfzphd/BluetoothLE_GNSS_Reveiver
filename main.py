@@ -8,7 +8,7 @@ ble = bluetooth.BLE()
 uart_ble = BLEUART(ble, name="GNSS-Receiver")
 
 # Initialize GPS UART
-uart_gps = UART(1, baudrate=0, tx=0, rx=1, timeout=10)  # Modify these settings based on your hardware or leave “baudrate=0” for autodetection
+uart_gps = UART(1, baudrate=115200, tx=0, rx=1, timeout=10)  # Modify these settings based on your hardware or leave “baudrate=0” for autodetection
 
 # Initialize LED
 led13 = Pin(13, Pin.OUT)
