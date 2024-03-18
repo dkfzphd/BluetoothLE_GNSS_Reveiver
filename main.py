@@ -38,7 +38,7 @@ async def forward_gps_data():
                         led13.on()
                 gps_buffer = sentences[-1].encode('utf-8')
                 
-            await asyncio.sleep(0.1)  # Send data once per second
+            await asyncio.sleep(0.1)  # Send data once per 0.1 second
 
         except Exception as e:
             print("Exception occurred:", str(e))
