@@ -57,7 +57,7 @@ async def forward_gps_data():
                         send_gps_data(sentence + b'\r\n')
                         led_data.off()
 
-            await asyncio.sleep(0.1)
+            await asyncio.sleep_ms(30)
 
         except OSError as e:
             log_error("UART read error: " + str(e))
